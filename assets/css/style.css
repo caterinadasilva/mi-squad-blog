@@ -1,0 +1,182 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, left,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  background-color: #DAFAF8;
+  color: #2A2B5F;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  display: block;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 10%;
+}
+
+header {
+  background-color: #393C83;
+  color: white;
+  padding: 10em 0 2em;
+  margin-bottom: 5em;
+  text-align: left;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  color: #F21368;
+  margin: .35em 0;
+  font-size: 1.5rem;
+}
+
+h1, h3 {
+  font-family: 'Copse', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-align: left;
+}
+
+form {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 5%;
+}
+
+label {
+  display: block;
+  font-family: 'Copse', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: #393C83;
+  margin: 1.2em 0 .5em;
+}
+
+input, select {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #f1f1f1;
+    line-height: 120%;
+    padding: 1%;
+    font-size: 120%;
+    transition: .5s ease all;
+}
+
+.usuario {
+    overflow: hidden;
+    margin-bottom: 2em; 
+}
+
+.usuario img {
+        display: block;
+    float: left;
+    width: initial;
+    border-radius: 20%;
+    background: white;
+    padding: 0;
+    border: 20px solid transparent;
+}
+
+.usuario .texto {
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin: 0 1em;
+}
+
+.btn {
+  display: block;
+  text-align: left;
+  font-family: 'Copse', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  color: #fff;
+  background-color: #393C83;
+  letter-spacing: 1px;
+  font-size: 90%;
+  padding: 1em .5em;
+  transition: .5s ease all;
+  margin: 1.2em 0 .5em;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+  background-color: #552cb9;
+  transition: .5s ease all;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  margin: 1em 0;
+  line-height: 1.7;
+  text-align: left;
+}
+
+span {
+  border-bottom: 2px #393C83 solid;
+  font-weight: 700;
+}
+
+b {
+  font-family: 'Copse', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 112%;
+  color: #393C83;
+}
+
+small {
+  font-size: .8rem;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 5em 0 0;
+  padding: 0 0 2em;
+}
