@@ -45,33 +45,35 @@ function squadMember(nombre, apellido, edad, hobby) {
 		button.appendChild(buttonT);
 		button.className = 'btn';
 		input.id = "comentarioPara" + squad.indexOf(this);
-		input.placeholder = "Escribe aquí un comentario"
+		input.placeholder = "Escribe aquí un comentario para " + this.nombre;
 		input.maxLength = "300";
 		form.appendChild(input);
 		form.appendChild(button);
-		var comentTitle = document.createElement('H4');
-		var comentTitleT = document.createTextNode("Comentarios:");
-		comentTitle.appendChild(comentTitleT);
 		var divComentsUsuario = document.createElement('DIV');
 		divComentsUsuario.id = "comentarios" + squad.indexOf(this);
 		button.onclick = function agregarComentario(){
-			document.getElementById(divComentsUsuario.id).innerHTML += '<p>' + input.value + '</p><button onclick="like()" class="heart"><i class="fa fa-heart fa-lg"></i></button>';
+			if (input.value.length > 0) {
+				var contador = 0;
+				document.getElementById(divComentsUsuario.id).innerHTML += '<p>' + input.value + '</p><button onclick="like()" class="heart"><i class="fa fa-heart fa-lg"></i><span class="contador">' + contador + '</span></button>';
 			return false;
+			}
 		};
 		divComentarios.appendChild(form);
-		divComentarios.appendChild(comentTitle);
 		divComentarios.appendChild(divComentsUsuario);
 		divUsuario.appendChild(divComentarios);
 		listado.appendChild(divUsuario);
 	}
 }
 
-function like() {
-	alert("miau");
+function like(element) {
+	document.getElementsByClassName('contador') =contador++;
+	//alert("miau");
+	return false;
+
 }
 
 const Laura = new squadMember("Laura","Peláez", "XX", "Cine");
-const Orieta = new squadMember("Orieta","Toto", 27, "Leer, Dormir");
+const Orieta = new squadMember("Orieta","Toro", 27, "Leer, Dormir");
 const Constanza = new squadMember("Constanza","Pecori", 26, "Tejer, Comer, Dormir");
 const Rangi = new squadMember("Rangi","Becerra", 32, "Viajar");
 const Caterina = new squadMember("Caterina","Da Silva", 26, "Jugar juegos online, Ver videos de gatos");

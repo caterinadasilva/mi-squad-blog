@@ -112,7 +112,7 @@ transition: .5s ease all;
 }
 
 .texto ul li {
-    line-height: 130%;
+  margin-bottom: .5em;
 }
 
 .usuario {
@@ -129,7 +129,7 @@ background: white;
 padding: 0;
 border: 20px solid transparent;
 max-width: 100px;
-    margin-bottom: 10em;
+margin-bottom: 10em;
 }
 
 .usuario .texto {
