@@ -82,6 +82,11 @@ font-weight: 800;
 text-align: left;
 }
 
+.titulo {
+  color:red;
+  font-size: 20px;
+}
+
 form {
 margin: 0 auto;
 padding: 0;

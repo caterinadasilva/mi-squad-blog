@@ -4,6 +4,7 @@ function squadMember(nombre, apellido, edad, hobby) {
 	this.edad = edad + " años";
 	this.imagen = new Image();
 	this.imagen.src = "img/" + this.nombre + ".png";
+	this.comentarios = "hola";
 	this.hobby = function(){
 		this.hobby = hobby.split(", ");
 		var list = document.createElement('UL');
@@ -51,25 +52,36 @@ function squadMember(nombre, apellido, edad, hobby) {
 		form.appendChild(button);
 		var divComentsUsuario = document.createElement('DIV');
 		divComentsUsuario.id = "comentarios" + squad.indexOf(this);
+		var comentarios = [];
+		var likeButton = document.createElement('BUTTON');
+		likeButton.className = 'btn-heart';
+		likeButton.innerHTML = '<i class="fa fa-heart fa-lg"></i>';
 		button.onclick = function agregarComentario(){
 			if (input.value.length > 0) {
-				var contador = 0;
-				document.getElementById(divComentsUsuario.id).innerHTML += '<p>' + input.value + '</p><button onclick="like()" class="heart"><i class="fa fa-heart fa-lg"></i><span class="contador">' + contador + '</span></button>';
-			return false;
+				comentarios.push(input.value);
+				console.log(comentarios);
+				var singleComment = document.createElement('DIV');
+				singleComment.id = divComentsUsuario.id + comentarios.length;
+				var pComment = document.createElement('P');
+				var tComment = document.createTextNode(input.value);
+				pComment.appendChild(tComment);
+				singleComment.appendChild(pComment);
+				singleComment.appendChild(likeButton);
+				document.getElementById(divComentsUsuario.id).appendChild(singleComment);
+				input.value = "";
+				return false;
 			}
 		};
+		likeButton.onclick = function like() {
+			//document.getElementsByClassName('contador') = contador++;
+			alert("miau");
+			return false;
+		}
 		divComentarios.appendChild(form);
 		divComentarios.appendChild(divComentsUsuario);
 		divUsuario.appendChild(divComentarios);
 		listado.appendChild(divUsuario);
 	}
-}
-
-function like(element) {
-	document.getElementsByClassName('contador') =contador++;
-	//alert("miau");
-	return false;
-
 }
 
 const Laura = new squadMember("Laura","Peláez", "XX", "Cine");
