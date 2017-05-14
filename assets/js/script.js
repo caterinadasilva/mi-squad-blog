@@ -53,35 +53,38 @@ function squadMember(nombre, apellido, edad, hobby) {
 		var divComentsUsuario = document.createElement('DIV');
 		divComentsUsuario.id = "comentarios" + squad.indexOf(this);
 		var comentarios = [];
-		var likeButton = document.createElement('BUTTON');
-		likeButton.className = 'btn-heart';
-		likeButton.innerHTML = '<i class="fa fa-heart fa-lg"></i>';
 		button.onclick = function agregarComentario(){
 			if (input.value.length > 0) {
 				comentarios.push(input.value);
 				console.log(comentarios);
 				var singleComment = document.createElement('DIV');
-				singleComment.id = divComentsUsuario.id + comentarios.length;
+				singleComment.id = divComentsUsuario.id + "no" + comentarios.length;
+				singleComment.className = "singleComment";
 				var pComment = document.createElement('P');
 				var tComment = document.createTextNode(input.value);
 				pComment.appendChild(tComment);
+				var likesDiv = document.createElement('DIV');
+				likesDiv.className = 'likes';
+				likesDiv.innerHTML = '<button class="btn btn-heart" onclick="like(this)"><i class="fa fa-heart fa-lg"></i></button>' + '<span>0</span>';
 				singleComment.appendChild(pComment);
-				singleComment.appendChild(likeButton);
+				singleComment.appendChild(likesDiv);
 				document.getElementById(divComentsUsuario.id).appendChild(singleComment);
 				input.value = "";
 				return false;
 			}
 		};
-		likeButton.onclick = function like() {
-			//document.getElementsByClassName('contador') = contador++;
-			alert("miau");
-			return false;
-		}
 		divComentarios.appendChild(form);
 		divComentarios.appendChild(divComentsUsuario);
 		divUsuario.appendChild(divComentarios);
 		listado.appendChild(divUsuario);
 	}
+}
+
+function like(click) {
+	var contador = click.nextSibling;
+	var numLikes = parseInt(contador.innerHTML) + 1;
+	contador.innerHTML = numLikes;
+	return false;
 }
 
 const Laura = new squadMember("Laura","Peláez", "XX", "Cine");

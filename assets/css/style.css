@@ -83,8 +83,8 @@ text-align: left;
 }
 
 .titulo {
-  color:red;
-  font-size: 20px;
+color:red;
+font-size: 20px;
 }
 
 form {
@@ -112,12 +112,12 @@ transition: .5s ease all;
 }
 
 .texto ul {
-    overflow: hidden;
-      margin: 1em 0;
+overflow: hidden;
+  margin: 1em 0;
 }
 
 .texto ul li {
-  margin-bottom: .5em;
+margin-bottom: .5em;
 }
 
 .usuario {
@@ -142,56 +142,93 @@ display: block;
 overflow: hidden;
 float: left;
 margin: 0 1em;
-    width: 60%;
+width: 60%;
 }
 
 .usuario .texto .jovi {
-    display: inline-block;
-    float: left;
-    margin: 1em 1em 1em 0;
-    padding: 0 0 4px;
+display: inline-block;
+float: left;
+margin: 1em 1em 1em 0;
+padding: 0 0 4px;
 }
 
 .usuario .comentarios {
-    float: left;
-    margin: 1em;
-    width: 500px;
+float: left;
+margin: 1em;
+width: 500px;
 }
 
 .usuario .comentarios textarea {
-  width: 98.8%;
-  min-height: 60px;
+width: 98.8%;
+min-height: 60px;
 }
 
 .usuario .comentarios .btn {
-  float: right;
+float: right;
 }
-
 .usuario .comentarios h4 {
-      width: 100%;
+  width: 100%;
+display: block;
+overflow: hidden;
+}
+.comentarios form {
+margin-bottom: 1em;
+}
+.usuario .comentarios .singleComment {
+display: block;
+width: 94%;
+padding: .5em 0 0 5%;
+overflow: hidden;
+border-left: 5px solid #F21368;
+}
+.usuario .comentarios .singleComment p, .usuario .comentarios .singleComment .likes {
+float: left;
+display: block;
+margin: 0;
+}
+.usuario .comentarios .singleComment p {
+width: 85%;
+padding: 10px 0;
+}
+.usuario .comentarios .singleComment .likes {
+width: 13%;
+padding: 10px 0 10px 2%;
+}
+.usuario .comentarios .singleComment .likes span {
+    color: #F21368;
+    font-family: 'Copse', Helvetica, Arial, sans-serif;
+    border-bottom: snow;
+    padding: 6px 0;
+    text-align: right;
     display: block;
-    overflow: hidden;
+    float: left;
+}
+.btn.btn-heart {
+margin: 0;
+padding: .7em;
+font-size: 70%;
+background-color: #F21368
 }
 
 .btn {
 display: block;
-    text-align: center;
-    font-family: 'Copse', Helvetica, Arial, sans-serif;
-    font-weight: 800;
-    cursor: pointer;
-    color: #fff;
-    background-color: #393C83;
-    letter-spacing: 1px;
-    font-size: 90%;
-    padding: 1em;
-    transition: .5s ease all;
-    margin: .5em 0 0;
-    border: transparent;
-    border-radius: 5px;
+text-align: center;
+font-family: 'Copse', Helvetica, Arial, sans-serif;
+font-weight: 800;
+cursor: pointer;
+color: #fff;
+background-color: #393C83;
+letter-spacing: 1px;
+font-size: 90%;
+padding: 1em;
+transition: .5s ease all;
+margin: .5em 0 0;
+border: transparent;
+border-radius: 5px;
 }
 
 .btn:hover, .btn:active, .btn:focus {
-background-color: #552cb9;
+opacity: .8;
 transition: .5s ease all;
 }
 
